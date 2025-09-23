@@ -10,18 +10,18 @@ source:
   sha256: 747b726e8acd35f20aef8ee74652a948575fb70b5fa8f816a692c9870d0ab0cb
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed
+  skip: true  # [py<37]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --ignore-installed
   number: 0
 
 requirements:
   host:
-    - python >=3.6,<4.0
+    - python
     - pip
     - hatchling
     - hatch-jupyter-builder
   run:
-    - python >=3.6,<4.0
+    - python
     - ipython
     - jinja2
     - pandas
@@ -52,10 +52,14 @@ test:
     - pip
 
 about:
-  home: https://pypi.org/project/pygwalker/
-  summary: 'pygwalker: Combining Jupyter Notebook with a Tableau-like UI'
+  home: https://kanaries.net/pygwalker
+  summary: Combining Jupyter Notebook with a Tableau-like UI
+  description: PyGWalker can simplify your Jupyter Notebook data analysis and data visualization workflow, by turning your pandas dataframe into an interactive user interface for visual exploration.
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
+  doc_url: https://kanaries.net/pygwalker
+  dev_url: https://github.com/Kanaries/pygwalker
 
 extra:
   recipe-maintainers:
