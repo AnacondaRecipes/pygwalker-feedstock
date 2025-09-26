@@ -10,6 +10,7 @@ source:
   sha256: 747b726e8acd35f20aef8ee74652a948575fb70b5fa8f816a692c9870d0ab0cb
 
 build:
+  # python-quickjs is not available on windows
   skip: true  # [py<37 or win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --ignore-installed
   number: 0
