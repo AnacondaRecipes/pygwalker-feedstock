@@ -45,7 +45,7 @@ requirements:
     - packaging
     - numpy
     - ipylab <=1.0.0
-    - python-quickjs
+    - python-quickjs  # [not win]
     - traitlets
     - anywidget
 
