@@ -22,34 +22,40 @@ requirements:
     - hatch-jupyter-builder
   run:
     - python
-    - ipython
     - jinja2
-    - pandas
-    - typing_extensions
+    - ipython
     - astor
+    - typing_extensions
     - ipywidgets
     - pydantic
     - psutil
-    - python-duckdb >=0.10.0
+    - python-duckdb >=0.10.1,<2.0.0
     - pyarrow
     - sqlglot >=23.15.8
     - requests
     - arrow
     - sqlalchemy
-    - analytics-python ==2.2.2
+    - gw-dsl-parser ==0.1.49.1
     - appdirs
+    - segment-analytics-python ==2.2.3
+    - pandas
     - pytz
     - kanaries-track ==0.0.5
     - cachetools
     - packaging
     - numpy <2.0.0
     - ipylab <=1.0.0
+    - python-quickjs
+    - traitlets
+    - anywidget
 
 test:
   imports:
     - pygwalker
   requires:
     - pip
+  commands:
+    - pip check
 
 about:
   home: https://kanaries.net/pygwalker
