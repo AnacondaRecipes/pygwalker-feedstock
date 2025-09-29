@@ -1,5 +1,0 @@
-channels:
-  - https://staging.continuum.io/pbp/fs/kanaries-track-feedstock/pr1/398acb7
-  - https://staging.continuum.io/preprod-pbp/fs/ipylab-feedstock/pr1/482566f
-  - https://staging.continuum.io/preprod-pbp/fs/segment-analytics-python-feedstock/pr2/574f6e6
-  - https://staging.continuum.io/pbp/fs/python-quickjs-feedstock/pr1/ed06515
