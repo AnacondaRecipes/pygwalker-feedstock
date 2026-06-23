@@ -1,5 +1,5 @@
 {% set name = "pygwalker" %}
-{% set version = "0.4.9.15" %}
+{% set version = "0.5.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pygwalker-{{ version }}.tar.gz
-  sha256: 747b726e8acd35f20aef8ee74652a948575fb70b5fa8f816a692c9870d0ab0cb
+  sha256: f37f83104e26b0824531675396fe9108b0e2d2a1936b2d85d24ae2d9314c9977
 
 build:
   # python-quickjs is not available on windows
@@ -30,7 +30,7 @@ requirements:
     - ipywidgets
     - pydantic
     - psutil
-    - python-duckdb >=0.10.1,<2.0.0
+    - python-duckdb >=0.10.4,<2.0.0
     - pyarrow
     - sqlglot >=23.15.8
     - requests
@@ -49,6 +49,14 @@ requirements:
     - python-quickjs
     - traitlets
     - anywidget
+  run_constrained:
+    - mini-racer >=0.12
+    - jupyter_client <=7.4.9,>6.0.0
+    - jupyter-server <=2.5.0
+    - ipywidgets <8.0.0,>7.0.0
+    - SQLAlchemy ==1.4.49
+    - snowflake-sqlalchemy ==1.5.0
+    - pyarrow ==10.0.1
 
 test:
   imports:
