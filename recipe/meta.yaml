@@ -10,8 +10,9 @@ source:
   sha256: f37f83104e26b0824531675396fe9108b0e2d2a1936b2d85d24ae2d9314c9977
 
 build:
-  # python-quickjs is not available on windows
-  skip: true  # [py<37 or win]
+  entry_points:
+    - pygwalker = bin.pygwalker_command:main
+  skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --ignore-installed
   number: 0
 
@@ -46,7 +47,6 @@ requirements:
     - packaging
     - numpy
     - ipylab <=1.0.0
-    - python-quickjs
     - traitlets
     - anywidget
   run_constrained:
