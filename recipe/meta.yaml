@@ -49,14 +49,6 @@ requirements:
     - ipylab <=1.0.0
     - traitlets
     - anywidget
-  run_constrained:
-    - mini-racer >=0.12
-    - jupyter_client <=7.4.9,>6.0.0
-    - jupyter-server <=2.5.0
-    - ipywidgets <8.0.0,>7.0.0
-    - SQLAlchemy ==1.4.49
-    - snowflake-sqlalchemy ==1.5.0
-    - pyarrow ==10.0.1
 
 test:
   imports:
